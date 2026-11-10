@@ -1,0 +1,28 @@
+class Move_zeros:    
+    def moving_zero(array):
+        arr=array
+        stack=[]
+        left =0
+        end=0
+        right=len(arr)-1
+        while left<right:
+            # print(arr)
+            
+            if arr[left]==0 or arr[right]==0:
+                if arr[left]==0:
+                    stack.append(arr[left])
+                    arr.remove(arr[left])
+                    left+=1
+                if arr[right]==0:
+                    stack.append(arr[right])
+                    arr.remove(arr[right])
+                    right-=1
+            else:
+                left+=1
+                right-=1
+        for i in stack[:]:
+            arr.append(stack.pop())
+        print(arr)
+move=Move_zeros()
+array=[1,2,0,0,3,0,4,0,5]
+Move_zeros.moving_zero(array)
