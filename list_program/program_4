@@ -1,0 +1,24 @@
+#  merge sorted array using two pointer
+
+arr1=[0,2,4,6,8]
+arr2=[1,3,5,7,9]
+left=0
+right=0
+length=len(arr1)+len(arr2)+1
+output=[]
+while left < len(arr1) and right < len(arr2):
+
+    if arr1[left]<arr2[right]:
+        output.append(arr1[left])
+        left+=1
+    else :
+        output.append((arr2[right]))
+        right+=1
+    # print(left,right)
+
+# print(output)
+if left < len(arr1) :
+    output += arr1[left:]
+if right < len(arr2):
+    output += arr2[right:]
+print(output)
