@@ -1,1 +1,28 @@
 
+
+#move the duplicate tto the end
+
+def demo():
+    a=[1,2,3,3,4,4,4,5]
+    left=0
+    right=1
+    
+    while right<len(a) :
+        if right==len(a)-1:
+            break
+        elif a[left]!=a[right]:
+            left+=1
+            right+=1
+        elif a[left]==a[right]:
+            print(a[left],a[right])
+            print(left,right)
+            for i in range(left,right):
+                b=a[right]
+                a.remove(a[right])
+                a.append(b)
+            # if right==len(a)-1:
+            #     break
+            
+    return a
+
+print(demo())

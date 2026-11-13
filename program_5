@@ -1,1 +1,18 @@
 
+# two pointer palindrome
+
+input1 ="madam"
+left=0
+right=len(input1)-1
+
+while(left<right):
+
+    if input1[left]==input1[right]:
+        left+=1
+        right-=1
+    else:
+        print("invalid palindrome")
+        break
+    
+if left>=right:
+    print("valid palidrome")
