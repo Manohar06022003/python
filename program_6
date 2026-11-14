@@ -1,3 +1,4 @@
+# sum of three numbers in list
 
 class sum_output:
     c=0
