@@ -1,0 +1,29 @@
+
+class sum_output:
+    c=0
+    lists=[]
+    target=None
+
+    def __init__(self,array,target):
+        self.lists=array
+        self.target=target
+
+    def output(self):
+        for i in range(0,len(self.lists)):
+            for j in range(1,len(self.lists)):
+                for k in range(2,len(self.lists)):
+                    c=self.lists[i]+self.lists[j]+self.lists[k]
+                    if c==self.target:
+                        return [self.lists[i],self.lists[j],self.lists[k]]
+
+
+lists=list(map(int,input("enter number : ").split()))
+target=int(input("enter target : "))
+s1=sum_output(lists,target)
+print(s1.output())
+                    
+
+        
+
+
+
