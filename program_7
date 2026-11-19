@@ -13,7 +13,7 @@ class palindrome:
                 return False            
                 
             left += 1
-            right -= 1
+            right -= 
         return True
 
 word=input("Enter a word : ")
