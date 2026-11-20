@@ -1,0 +1,33 @@
+
+# sum of three values in list
+
+class three_values:
+
+    output_list =[]
+
+    def __init__(self , input_list,expected_total):
+
+        self.input_list=input_list
+        self.expected_total=expected_total
+
+    def check(self):
+        for i in range (len(self.input_list)):
+            for j in range (i+1,len(self.input_list)):
+                for k in range (j+1,len(self.input_list)):
+
+                    if self.input_list[i]+self.input_list[j]+self.input_list[k] == self.expected_total:
+
+                        self.output_list.append((self.input_list[i],self.input_list[j],self.input_list[k]))
+                        return self.output_list
+        return "No such values found in the list"
+
+s1=list(map(int,input("Enter the list of numbers : ").split(',')))
+expected_total = int(input("Enter the expected total : "))
+s1=three_values(s1,expected_total)
+print(s1.check())
+
+                    
+
+
+                
+        
