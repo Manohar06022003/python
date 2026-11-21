@@ -1,0 +1,15 @@
+class output:
+
+    def __init__(self, input_data ):
+        self.input_data = input_data
+
+    def return_data(self):
+        output=list(self.input_data)
+        output[0],output[len(output)-1]=output[len(output)-1],output[0]
+        final_output="".join(output)
+        return final_output
+
+input_data = input("Enter the string : ")
+output1=output(input_data)
+print("The output after swapping the first and last character is : ",output1.return_data())
+        
