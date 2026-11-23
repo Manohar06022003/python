@@ -1,0 +1,33 @@
+class output_word:
+    empty_list=[]
+    word=""
+    
+    def __init__(self, input_string):
+        self.input_string = input_string
+
+    def output(self):        
+        i=0
+        while i < len(self.input_string):
+            if self.input_string[i]== " ":
+                if output_word.word != "":
+                    output_word.empty_list.append(output_word.word)
+                    output_word.word=""
+                    print("if",i)
+                i+=1
+
+            else:
+                output_word.word+=self.input_string[i]                   
+                print("else",i)
+                if i == len(self.input_string)-1:
+                   if output_word.word != "":
+                       output_word.empty_list.append(output_word.word)
+                i+=1
+
+        print(len(self.input_string))
+        print(output_word.empty_list)
+        return output_word.empty_list[len(output_word.empty_list)-1] 
+
+input_string= input("Enter string : ")
+output_instance = output_word(input_string)
+print("The last word in the string is : ",output_instance.output())
+
