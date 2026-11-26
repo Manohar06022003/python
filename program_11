@@ -1,0 +1,22 @@
+# factorial numbers without using loop
+
+class output:
+    
+    def __init__(self, input_var):
+        self.input_var=input_var
+        self.output_var=1
+
+    def return_output(self):
+
+        if self.input_var>=1:
+            self.output_var*=self.input_var
+            self.input_var-=1
+            return self.return_output()
+            
+        else:
+            return self.output_var
+
+input_var = int(input("Enter the value : "))
+result = output(input_var)
+print(result.return_output())        
+            
